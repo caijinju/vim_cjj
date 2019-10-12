@@ -2,59 +2,59 @@
 "	finish
 "endif
 
-" è®¾ç½®ç¼©è¿›
+" ÉèÖÃËõ½ø
 " set tabstop=4
-" å–æ¶ˆè‡ªåŠ¨ç¼©è¿›
+" È¡Ïû×Ô¶¯Ëõ½ø
 setlocal noautoindent
-" è®¾ç½®tab
+" ÉèÖÃtab
 setlocal softtabstop=4
 
-" åœ¨æ’å…¥æ¨¡å¼æŒ‰å›è½¦æ—¶ï¼Œè‡ªåŠ¨æ’å…¥å½“å‰æ³¨é‡Šå‰å¯¼ç¬¦ã€‚
+" ÔÚ²åÈëÄ£Ê½°´»Ø³µÊ±£¬×Ô¶¯²åÈëµ±Ç°×¢ÊÍÇ°µ¼·û¡£
 setlocal fo+=r,o
-" æ·»åŠ æ³¨é‡Šå®šä¹‰ï¼šå³å¯¹é½æ£€æµ‹"â”ƒ"ç¬¦å·
-setlocal comments+=n:â”ƒ
-" æ·»åŠ æ³¨é‡Šå®šä¹‰ï¼šå³å¯¹é½æ£€æµ‹"â”£"ç¬¦å·
-setlocal comments+=n:â”£
-" è®¾ç½®3æ®µå¼æ³¨é‡Š
-"set comments+=sr:â”£,m:â”£,ex:â”—		" æš‚æµ‹ä¸æˆåŠŸã€‚
+" Ìí¼Ó×¢ÊÍ¶¨Òå£ºÓÒ¶ÔÆë¼ì²â"©§"·ûºÅ
+setlocal comments+=n:©§
+" Ìí¼Ó×¢ÊÍ¶¨Òå£ºÓÒ¶ÔÆë¼ì²â"©Ç"·ûºÅ
+setlocal comments+=n:©Ç
+" ÉèÖÃ3¶ÎÊ½×¢ÊÍ
+"set comments+=sr:©Ç,m:©Ç,ex:©»		" Ôİ²â²»³É¹¦¡£
 
 
-" è®¾ç½®è¯­æ³•å…³é”®å­—å¿½ç•¥å¤§å°å†™
+" ÉèÖÃÓï·¨¹Ø¼ü×ÖºöÂÔ´óĞ¡Ğ´
 syntax	case	ignore
-" è®¾ç½®è¯­æ³•å…³é”®å­—ç»„ IOPort ï¼ŒåŒ…æ‹¬ä»¥ä¸‹å…·ä½“å­—ç¬¦ä¸²ï¼šdata_pa,data_pb,data_pc,data_pd,data_pe
+" ÉèÖÃÓï·¨¹Ø¼ü×Ö×é IOPort £¬°üÀ¨ÒÔÏÂ¾ßÌå×Ö·û´®£ºdata_pa,data_pb,data_pc,data_pd,data_pe
 "syntax	keyword IOPort	data_pa	data_pb	data_pc	data_pd	data_pe
-" è®¾ç½®è¯­æ³•å…³é”®å­—ç»„ Instruction ï¼ŒåŒ…æ‹¬ä»¥ä¸‹å…·ä½“å­—ç¬¦ä¸²ï¼šld,inc,adc
+" ÉèÖÃÓï·¨¹Ø¼ü×Ö×é Instruction £¬°üÀ¨ÒÔÏÂ¾ßÌå×Ö·û´®£ºld,inc,adc
 "syntax	keyword	Instruction	ld	inc	adc
-" è®¾ç½®è¯­æ³•åŒ¹é…ç»„ cjj_info ï¼ŒåŒ¹é…å¼€å¤´ä¸º=çš„ä¸€è¡Œ
+" ÉèÖÃÓï·¨Æ¥Åä×é cjj_info £¬Æ¥Åä¿ªÍ·Îª=µÄÒ»ĞĞ
 syntax	match	cjj_info	"^=.*"
-" è®¾ç½®è¯­æ³•åŒ¹é…ç»„ cjj_time ï¼ŒåŒ¹é…æ—¥æœŸ
+" ÉèÖÃÓï·¨Æ¥Åä×é cjj_time £¬Æ¥ÅäÈÕÆÚ
 syntax	match	cjj_time	"\v^\d{4}(-\d{2}){2}(\s\d{2}(:\d{2}){2})?"
 
-" è®¾ç½®è¯­æ³•ç»„é«˜äº®ï¼Œç›´æ¥è®¾ç½®é¢œè‰²
+" ÉèÖÃÓï·¨×é¸ßÁÁ£¬Ö±½ÓÉèÖÃÑÕÉ«
 highlight IOPort ctermfg=1 guifg=red
 highlight Instruction ctermfg=2 guifg=green
 highlight cjj_info	gui=bold	guifg=SeaGreen	guibg=Grey
 highlight cjj_time	gui=bold	guifg=DarkYellow
-" å¦ä¸€ç§è®¾ç½®è¯­æ³•ç»„é«˜äº®ï¼Œä½¿ç”¨å·²è®¾ç½®çš„é«˜äº®è¯­æ³•ç»„ï¼Œç›´æ¥é“¾æ¥è¯¥é«˜äº®ç»„å³å¯ã€‚
+" ÁíÒ»ÖÖÉèÖÃÓï·¨×é¸ßÁÁ£¬Ê¹ÓÃÒÑÉèÖÃµÄ¸ßÁÁÓï·¨×é£¬Ö±½ÓÁ´½Ó¸Ã¸ßÁÁ×é¼´¿É¡£
 "highlight default link	cjj_time	Pmenu
 
-" è®¾ç½®ç¼©å†™
-:iabbre <buffer> dd ========================================================================================  åä¸½çš„åˆ†å‰²çº¿  ========================================================================================
-:iabbre <buffer> ld =========================================================================================  <c-r>=strftime("%Y-%m-%d")<cr>  =========================================================================================-- æ¡ˆå­ ---- å…¶ä»–äº‹åŠ¡ --
+" ÉèÖÃËõĞ´
+:iabbre <buffer> dd ========================================================================================  »ªÀöµÄ·Ö¸îÏß  ========================================================================================
+:iabbre <buffer> ld =========================================================================================  <c-r>=strftime("%Y-%m-%d")<cr>  =========================================================================================-- °¸×Ó ---- ÆäËûÊÂÎñ --
 
 :iabbrev <buffer> <silent> tt 0i=strftime("%Y-%m-%d %H:%M:%S") --->
 " :iabbre <buffer> <silent> tt :call setline(line("."),strftime("%Y-%m-%d %H:%M:%S"))A --->
-" ç”±äºä¸Šé¢å·²ç»è®¾ç½®äº†æ³¨é‡Šè‡ªåŠ¨æ’å…¥åŠŸèƒ½ï¼Œä¸‹é¢éƒ¨åˆ†ç¼©å†™å¯ä»¥åˆ é™¤
-" :iabbre <buffer> nn <tab>â”£
-" :iabbre <buffer> mm <tab>â”ƒ
-" :iabbre <buffer> ee <tab>â”—
-" :iabbre <buffer> lnn <tab>â”ƒ<tab>â”£
-" :iabbre <buffer> llnn <tab>â”ƒ<tab>â”ƒ<tab>â”£
-:iabbre <buffer> nn â”£
-:iabbre <buffer> mm â”ƒ
-:iabbre <buffer> ee â”—
+" ÓÉÓÚÉÏÃæÒÑ¾­ÉèÖÃÁË×¢ÊÍ×Ô¶¯²åÈë¹¦ÄÜ£¬ÏÂÃæ²¿·ÖËõĞ´¿ÉÒÔÉ¾³ı
+" :iabbre <buffer> nn <tab>©Ç
+" :iabbre <buffer> mm <tab>©§
+" :iabbre <buffer> ee <tab>©»
+" :iabbre <buffer> lnn <tab>©§<tab>©Ç
+" :iabbre <buffer> llnn <tab>©§<tab>©§<tab>©Ç
+:iabbre <buffer> nn ©Ç
+:iabbre <buffer> mm ©§
+:iabbre <buffer> ee ©»
 
-" è®¾ç½®æ˜ å°„
+" ÉèÖÃÓ³Éä
 :inoremap <buffer> jk 
 :inoremap <buffer> <c-d> ggVGDi
 :vnoremap <buffer> <c-c> "+y
